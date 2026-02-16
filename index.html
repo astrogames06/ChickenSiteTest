@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/logo.svg">
+    <title>Papa Joes Chicken</title>
+</head>
+<body>
+    <div id="navbar">
+        <div id="logo">
+            <img src="assets/logo.svg" alt="logo">
+            <h1 id="title">Papa Joe's Chicken</h1>
+        </div>
+
+        <div id="navbar_links">
+            <button onclick="scrollToSection(event, 'info-container')">
+                Home <img src="assets/home.svg" alt="home">
+            </button>
+            <button onclick="scrollToSection(event, 'location-container')">
+                Location <img src="assets/location.svg" alt="location">
+            </button>
+            <button>Menu <img src="assets/menu.svg" alt="menu"></button>
+        </div>
+    </div>
+
+    <div class="section" id="info-container">
+        <img style="width: 20%;" src="assets/logo.svg" alt="logo">
+        <p id="info">
+            Papa Joe's Chicken is a small, friendly restaurant. <br>
+            It serves hot, crispy chicken that tastes great. <br>
+            The staff is kind, and the place feels cozy. <br>
+            People come here for a quick, tasty meal. <br>
+        </p>
+        <br>
+        <h1>↓</h1>
+    </div>
+
+    <div class="section" id="location-container">
+        <h1 class="section-title">Location <img src="assets/location.svg" alt="pin"></h1>
+
+        <h1>33, Huffin Puffin Rd, Rosebay</h1>
+        <iframe id="map-iframe" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.588907752105!2d151.26997537600096!3d-33.874483919353786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12adaf61ce4725%3A0x4e7a36b424c3191f!2sOporto%20Rose%20Bay!5e0!3m2!1sen!2sau!4v1771212058240!5m2!1sen!2sau" 
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <div class="section" id="menu-container">
+        <h1 class="section-title">Menu <img src="assets/menu.svg" alt="pin"></h1>
+
+        <ul class="menu-items">
+            <li>Whole Roast Chicken $5
+                <img src="assets/chicken.png" alt="chicken">
+            </li>
+            <li>Chips $3
+                <img src="assets/chicken.png" alt="chicken">
+            </li>
+            <li>Soda $1
+                <img src="assets/chicken.png" alt="chicken">
+            </li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
