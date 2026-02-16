@@ -1,0 +1,24 @@
+@media (max-width: 730px)
+{
+    .big-logo
+    {
+        margin-top: 200px;
+    }
+    
+    #info
+    {
+        font-size: x-large;
+    }
+    .section
+    {
+        padding-bottom: 5%;
+    }
+}
+
+@media (max-width: 380px)
+{
+    #info
+    {
+        font-size: large;
+    }
+}
