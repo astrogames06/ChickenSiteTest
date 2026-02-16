@@ -95,7 +95,7 @@ body
     font-size: calc(100vh - 700px);
 }
 
-#location-container
+#location-container, #contact-container
 {
     background-color: rgb(255, 214, 137);
 }
@@ -112,8 +112,15 @@ body
 .section-title img
 {
     width: 60px;
+    margin-left: 20px;
 }
 
+.sub-title
+{
+    font-size: 30px;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
 
 #info
 {
@@ -131,30 +138,42 @@ body
     height: 60% !important;
 }
 
-.menu-items {
+.menu-items
+{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 50%;
+    gap: 20px;
+}
+
+.menu-items .item
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+    border-color: black;
+    background-color: white;
     text-align: center;
 }
 
-.menu-items li {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    text-align: left;
-    width: 100%;
+.menu-items .item img
+{
+    width: 20%;
+    border-radius: 10px;
 }
 
-.menu-items li img {
-    width: 10%;
-    border-radius: 20px;
+.menu-items .item h1
+{
+    font-size: clamp(35px, 40px, 70px);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.hours-open
+{
+    font-size: xx-large;
 }

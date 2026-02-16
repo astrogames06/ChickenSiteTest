@@ -21,7 +21,12 @@
             <button onclick="scrollToSection(event, 'location-container')">
                 Location <img src="assets/location.svg" alt="location">
             </button>
-            <button>Menu <img src="assets/menu.svg" alt="menu"></button>
+            <button onclick="scrollToSection(event, 'menu-container')">
+                Menu <img src="assets/menu.svg" alt="menu">
+            </button>
+            <button onclick="scrollToSection(event, 'contact-container')">
+                Contact <img src="assets/contact.svg" alt="menu">
+            </button>
         </div>
     </div>
 
@@ -49,17 +54,39 @@
     <div class="section" id="menu-container">
         <h1 class="section-title">Menu <img src="assets/menu.svg" alt="pin"></h1>
 
-        <ul class="menu-items">
-            <li>Whole Roast Chicken $5
+        <div class="menu-items">
+            <div class="item">
                 <img src="assets/chicken.png" alt="chicken">
+                <h1 class="item-info">Soda $1</h1>
+            </div>
+            <div class="item">
+                <img src="assets/chicken.png" alt="chicken">
+                <h1 class="item-info">Chips $2</h1>
+            </div>
+            <div class="item">
+                <img src="assets/chicken.png" alt="chicken">
+                <h1 class="item-info">Whole Roast Chicken $5</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="section" id="contact-container">
+        <h1 class="section-title">Contact <img src="assets/contact.svg" alt="phone"></h1>
+
+        <h1 class="sub-title">Hours Open</h1>
+        <ul class="hours-open">
+            <li>
+                MON - FRI, 8AM - 8PM
             </li>
-            <li>Chips $3
-                <img src="assets/chicken.png" alt="chicken">
-            </li>
-            <li>Soda $1
-                <img src="assets/chicken.png" alt="chicken">
+            <li>
+                SAT - SUN, 10AM - 5PM
             </li>
         </ul>
+        
+        <h1 class="sub-title">
+            Phone:
+            +61404907277
+        </h1>
     </div>
 
     <script src="script.js"></script>
