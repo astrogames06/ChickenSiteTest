@@ -14,8 +14,16 @@ body
 #navbar
 {
     display: flex;
+    flex-wrap: row wrap;
+    flex-direction: row;
     justify-content: space-between;
     background-color: rgb(255, 214, 137);
+
+        position: fixed;  /* <-- makes it stick to top */
+    top: 0;           /* <-- top of viewport */
+    left: 0;          /* <-- align to left edge */
+    width: 100%;      /* <-- full width */
+    z-index: 1000; 
 }
 
 #navbar #logo
@@ -92,7 +100,7 @@ body
 
 #info-container h1
 {
-    font-size: calc(100vh - 700px);
+    font-size: clamp(5vh, 10vh, 20vh);
 }
 
 #location-container, #contact-container
