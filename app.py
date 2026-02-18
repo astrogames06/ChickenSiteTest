@@ -3,7 +3,9 @@ import os
 from openai import OpenAI
 from flask_cors import CORS
 
-app = Flask(__name__)
+app = Flask(__name__,
+    static_url_path='',
+)
 CORS(app)
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
@@ -29,9 +31,9 @@ Always try to answer based on this information.
 
 @app.route("/")
 def index():
-    return "Hello, AI!"
+    return render_template("index.html")
 
-@app.route("/api", methods=["POST"])
+@app.route("/gpt", methods=["POST"])
 def api():
     data = request.json
     text = data.get("text", "")
@@ -51,4 +53,4 @@ def api():
     return jsonify({"output": output})
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8080)), debug=True)
