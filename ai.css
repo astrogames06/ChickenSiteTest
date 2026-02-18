@@ -35,7 +35,7 @@
     background-color: rgb(0, 166, 255);
     color: white;
     padding: 10px;
-    width: fit-content;
+    width: 300px;
     border-radius: 15px;
     margin-bottom: 10px;
 }
@@ -72,15 +72,33 @@
     padding-left: 0px;
     gap: 10px;
     margin-bottom: 10px;
+    overflow-y: auto;
 }
 
 #ai-chat-ul li
 {
     align-self: flex-end;
-    width: max-content;
+    width: 100px;
     padding: 5px;
     border-radius: 10px;
 }
+
+#ai-chat-ul::-webkit-scrollbar
+{
+    background: none;
+}
+
+#ai-chat-ul::-webkit-scrollbar-thumb {
+    background-color: #c0c0c0;
+    border-radius: 10px;
+}
+
+/* #ai-chat-ul::-webkit-scrollbar-thumb:hover {
+    background-color: #8b8b8b;
+    opacity: 0.8;
+    border-radius: 10px;
+    transition: background-color 0.2s;
+} */
 
 .ai-out
 {
@@ -115,6 +133,7 @@
     border: none;
     border-radius: 10px;
     padding: 10px;
+    width: 100%;
 }
 
 #ai-chat-input:focus

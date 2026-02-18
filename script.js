@@ -28,7 +28,7 @@ function openchat()
     }
 }
 
-function send_ai()
+async function send_ai()
 {
     /*
            <li class="ai-out"><p>Im bot</p></li>
@@ -46,4 +46,34 @@ function send_ai()
     new_usr_msg.appendChild(new_usr_msg_p);
 
     ai_chat_ul.appendChild(new_usr_msg)
+
+    /*
+                const out = document.getElementById("out");
+            out.innerText = "Loading...";
+
+            const text = document.getElementById("txt").value;
+            const model = document.getElementById('models').value;
+            const res = await axios.post("/api", { 
+                text: text,
+                model: model
+            });
+
+            const d = res.data.output;
+            out.innerText = d;
+    */
+
+    const res = await axios.post("http://127.0.0.1:8080/api", {
+        text: usr_ai_chat_inp.value,
+        model: 'gpt-3.5-turbo'
+    });
+    const d = res.data.output;
+
+    let new_ai_msg = document.createElement('li');
+    new_ai_msg.classList.add('ai-out');
+
+    let new_ai_msg_p = document.createElement('p');
+    new_ai_msg_p.innerText = d;
+    new_ai_msg.appendChild(new_ai_msg_p);
+
+    ai_chat_ul.appendChild(new_ai_msg)
 }
