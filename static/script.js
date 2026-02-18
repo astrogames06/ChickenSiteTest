@@ -67,9 +67,10 @@ document.addEventListener("DOMContentLoaded", () => {
     load_msgs();
 
     let usr_ai_chat_inp = document.getElementById('ai-chat-input');
-    usr_ai_chat_inp.addEventListener("keydown", function(event) {
-        if (event.key === "Enter") {
-            send_ai()
+    usr_ai_chat_inp.addEventListener("keydown", (event) => {
+        if (event.key === "Enter")
+        {
+            send_ai();
         }
     });
 })
