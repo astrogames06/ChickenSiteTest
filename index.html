@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="ai.css">
     <link rel="stylesheet" href="responsive.css">
     <link rel="icon" type="image/x-icon" href="/assets/logo.svg">
     <title>Papa Joes Chicken</title>
@@ -92,14 +93,20 @@
     </div>
 
 
-    <div id="ai-chat">
-        <ul>
-            <li class="ai-out"><p>Im bot</p></li>
-            <li class="usr-out"><p>Hello!</p></li>
-            <li class="ai-out"><p>what do u want!</p></li>
+    <div id="ai-chat" class="close-chat">
+        <div class="ai-chat-title">
+            <img src="assets/robot.svg" alt="robot">
+            <p>AI Helper Chat</p>
+        </div>
+
+        <ul id="ai-chat-ul">
+
         </ul>
         
-        <input>
+        <div class="ai-chat-inp-container">
+            <input id="ai-chat-input" placeholder="Enter message to bot!">
+            <img id="ai-send-btn" onclick="send_ai()" src="assets/up-arrow.svg" alt="up-arrow">
+        </div>
     </div>
     <button onclick="openchat()" id="ai-btn">
         <img src="assets/robot.svg" alt="robot">
