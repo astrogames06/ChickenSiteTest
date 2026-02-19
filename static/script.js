@@ -42,6 +42,9 @@ function load_msgs()
         if (type === "usr")
         {
             let new_usr_msg = document.createElement('li');
+            let usr_msg_ico = document.createElement('img');
+            usr_msg_ico.src = "assets/user.svg";
+            new_usr_msg.appendChild(usr_msg_ico);
             new_usr_msg.classList.add('usr-out');
 
             let new_usr_msg_p = document.createElement('p');
@@ -53,6 +56,9 @@ function load_msgs()
         else if (type === "ai")
         {
             let new_ai_msg = document.createElement('li');
+            let ai_msg_ico = document.createElement('img');
+            ai_msg_ico.src = "assets/robot.svg";
+            new_ai_msg.appendChild(ai_msg_ico);
             new_ai_msg.classList.add('ai-out');
 
             let new_ai_msg_p = document.createElement('p');
