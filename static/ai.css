@@ -39,6 +39,7 @@
     height: auto;
     border-radius: 15px;
     margin-bottom: 10px;
+    z-index: 10001; /* Puts it at very top */
 }
 
 @media (max-width: 700px) {
