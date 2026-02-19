@@ -93,6 +93,9 @@ async function send_ai()
 
     // Adds the AI message bubble to chat
     let new_ai_msg = document.createElement('li');
+    let ai_msg_ico = document.createElement('img');
+    ai_msg_ico.src = "assets/robot.svg";
+    new_ai_msg.appendChild(ai_msg_ico);
     new_ai_msg.classList.add('ai-out');
 
     let new_ai_msg_p = document.createElement('p');
